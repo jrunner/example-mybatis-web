@@ -1,0 +1,5 @@
+http://my.oschina.net/lujianing/blog/200135
+
+$ROOT即example-mybatis-web
+
+$ROOT/mybatis-generator目录下的文件是有mybatis插件生成的，位置是在$ROOT/target下.

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 配置缓存设置 -->
+	<settings>
+		<setting name="cacheEnabled" value="false"/>
+	</settings>
+
+    <!--配置model别名-->
+    <typeAliases>
+        <typeAlias type="com.t2t.top.model.po.User" alias="user" />
+        <typeAlias type="com.t2t.top.model.po.UserSay" alias="userSay" />
+    </typeAliases>
+
+    <!-- 配置数据库参数 -->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver" />
+                <property name="url" value="jdbc:mysql://127.0.0.1:3306/mybatis?useUnicode=true&amp;characterEncoding=utf8"/>
+                <property name="username" value="root" />
+                <property name="password" value="root" />
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--加载mapper文件 -->
+    <mappers>
+         <mapper resource="com/t2t/top/mapper/UserMapper.xml" />
+         <mapper resource="com/t2t/top/mapper/UserSayMapper.xml" />
+    </mappers>
+
+</configuration>

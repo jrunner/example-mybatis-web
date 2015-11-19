@@ -1,0 +1,25 @@
+1. 关于判断说明
+尽量采用commons包的工具类
+例:
+org.apache.commons.lang3.StringUtils
+org.apache.commons.collections.CollectionUtils
+
+2. 关于业务逻辑说明
+应该尽量放在service层
+
+3. 关于工具包说明
+util下的类，全部统一xxxUtils
+例:BeanUtils、GsonUtils、PageUtils、RestUtils
+
+4. 关于model说明
+存放的是数据对象。po（持久层对象）、dto传输层对象
+
+5. 关于test类说明
+测试类的命名规范，对应类名+Test，同时主要路径
+例:
+com.t2t.top.service.UserServiceImpl
+com.t2t.top.service.UserServiceImplTest
+
+6. 关于maven
+1) 注意pom.xml中的resources用法
+2) 注意pom.xml中的profiles用法
